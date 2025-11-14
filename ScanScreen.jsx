@@ -4,14 +4,14 @@ import { Button, StyleSheet, View } from 'react-native';
 export default function HomeScreen() {
   const navigation = useNavigation();
 
-  const navigateToScan = (data)=>{
-    navigation.navigate('Scan', {
+  const navigateToDetails = (data)=>{
+    navigation.navigate('Details', {
             data,
           });
   }
   return (
     <View style={styles.container}>
-      <Button onPress={() => navigateToScan("Hello world")} title='Go to Details'/>
+      <Button onPress={() => navigateToDetails("Hello world")} title='Go to Details'/>
     </View>
   );
 }
