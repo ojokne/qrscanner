@@ -4,14 +4,12 @@ import { Button, StyleSheet, View } from 'react-native';
 export default function HomeScreen() {
   const navigation = useNavigation();
 
-  const navigateToScan = (data)=>{
-    navigation.navigate('Scan', {
-            data,
-          });
-  }
   return (
     <View style={styles.container}>
-      <Button onPress={() => navigateToScan("Hello world")} title='Go to Details'/>
+      <Button
+        title="Scan QR Code"
+        onPress={() => navigation.navigate("Scan")}
+      />
     </View>
   );
 }

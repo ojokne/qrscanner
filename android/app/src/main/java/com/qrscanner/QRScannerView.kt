@@ -162,8 +162,8 @@ private fun addTouchListeners() {
   private var lastFrameTime = 0L
 
   private fun sendFrameToJS(bitmap: Bitmap) {
-    if (isProcessingFrame) return  // Stop flooding JS
-    isProcessingFrame = true       // Lock until JS finishes
+    if (isProcessingFrame) return  
+    isProcessingFrame = true       
 
     val reactContext = context as? ReactContext ?: return
     val width = bitmap.width

@@ -5,6 +5,7 @@ import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from "./HomeScreen"
 import DetailsScreen from "./DetailsScreen"
+import ScanScreen from "./ScanScreen"
 
 const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
@@ -20,6 +21,12 @@ const RootStack = createNativeStackNavigator({
     },
     Details: {
       screen: DetailsScreen,
+      options: {
+        title: 'Details',
+      },
+    },
+    Scan: {
+      screen: ScanScreen,
       options: {
         title: 'Details',
       },
